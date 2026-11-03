@@ -12,6 +12,9 @@
       gtag('config', 'G-ZS5PRJ8F1H');
     </script>
 
+    <!-- 구글 서치 콘솔 (Google Search Console 사이트 소유권 확인 메타태그) -->
+    <meta name="google-site-verification" content="google8dfc27124880d18e" />
+
     <!-- 브라우저 탭 아이콘 (빌딩/부동산 모양 SVG 파비콘) -->
     <link
       rel="icon"
@@ -69,21 +72,68 @@
       content="Instant US rental property cash flow, Cap Rate, and DSCR loan calculator."
     />
 
-    <!-- 구글 구조화 데이터 (JSON-LD: 검색 결과에 금융 웹앱 정보 표시) -->
+    <!-- 구글 구조화 데이터 (JSON-LD: WebApplication + Organization 7개 네트워크 + FAQ 리치 스니펫) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "RentalRoiSmart US Rental Property ROI & DSCR Calculator",
-        "url": "https://rentalroi.bangjang.net/",
-        "description": "Free US rental property cash flow, Cap Rate, Cash-on-Cash return, and DSCR loan qualification calculator across all 50 states and DC.",
-        "applicationCategory": "FinanceApplication",
-        "operatingSystem": "All",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        }
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "RentalRoiSmart US Rental Property ROI & DSCR Calculator",
+            "url": "https://rentalroi.bangjang.net/",
+            "description": "Free US rental property cash flow, Cap Rate, Cash-on-Cash return, and DSCR loan qualification calculator across all 50 states and DC.",
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "All",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "Organization",
+            "name": "US Smart Finance Network",
+            "url": "https://rentalroi.bangjang.net/",
+            "sameAs": [
+              "https://mortgage.bangjang.net",
+              "https://paycheck.bangjang.net",
+              "https://autoloan.bangjang.net",
+              "https://1099tax.bangjang.net",
+              "https://401k.bangjang.net",
+              "https://heloc.bangjang.net",
+              "https://rentalroi.bangjang.net"
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is a good DSCR ratio for a rental property investment loan?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Most US DSCR (Debt Service Coverage Ratio) mortgage lenders require a minimum DSCR of 1.20x to 1.25x for their best interest rates, meaning the property's gross monthly rent is at least 120% to 125% of the monthly PITIA (Principal, Interest, Taxes, Insurance, and HOA) payment."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do you calculate Cap Rate vs. Cash-on-Cash Return?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Cap Rate equals annual Net Operating Income (NOI) divided by the property's purchase price, measuring unleveraged yield. Cash-on-Cash Return equals annual pre-tax cash flow (after mortgage payments) divided by your total out-of-pocket cash invested (down payment plus closing and rehab costs)."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why are property taxes higher on rental properties in some states?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Many US states reserve homestead exemptions and assessment caps strictly for owner-occupied primary residences. Investment and rental properties are taxed at higher non-homestead assessment ratios and require specialized DP-3 landlord insurance."
+                }
+              }
+            ]
+          }
+        ]
       }
     </script>
   </head>
@@ -92,4 +142,3 @@
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-
